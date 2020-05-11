@@ -6,10 +6,13 @@ import './index.css';
 //import App from './App';
 import Galeria from './Galeria';
 import * as serviceWorker from './serviceWorker';
+import 'tachyons';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Galeria />
+        <Galeria
+            something={'Its My ' + 'React Gallery'}
+        />
     </React.StrictMode>,
     document.getElementById('root')
 );
