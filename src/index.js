@@ -3,13 +3,13 @@ import React from 'react';
 //what screen to rendering
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
+import Galeria from './Galeria';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <h1>Witam</h1>
-        <App />
+        <Galeria />
     </React.StrictMode>,
     document.getElementById('root')
 );
