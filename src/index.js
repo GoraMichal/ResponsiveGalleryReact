@@ -1,18 +1,18 @@
 //view library
-import React from 'react'; 
+import React from 'react';
 //what screen to rendering
 import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './App';
-import Galeria from './Galeria';
-import * as serviceWorker from './serviceWorker';
+
+import CardList from './CardList.js';
+//destruktor
+import { images } from './Gallery.js';
+
 import 'tachyons';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Galeria
-            something={'Its My ' + 'React Gallery'}
-        />
+        <CardList images={images}/>
     </React.StrictMode>,
     document.getElementById('root')
 );

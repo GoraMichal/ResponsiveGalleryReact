@@ -12,7 +12,7 @@
 //export default Galeria;
 
 import React, { Component } from 'react';
-import './gallery.css';
+//import './gallery.css';
 
 //className - JSX
 
