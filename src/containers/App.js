@@ -1,11 +1,12 @@
 //Main component file (smth like contener)
 import React, { Component } from 'react';
-import CardList from './CardList.js';
-import SearchBox from './SearchBox';
+import CardList from '../components/CardList.js';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll.js';
 //Destrukturyzacja
-import { images } from './Gallery.js';
+import { images } from '../Gallery.js';
 
-import './index.css';
+import '../index.css';
 
 //Klasa App zawiera konstruktor do tworzenia dwoch stanow: images, searchfield
 //Stany sluza do renderowania komponentow 
@@ -40,22 +41,24 @@ class App extends Component {
     }
 
     render() {
-        const filteredImages = this.state.image.filter(image => {
-            return image.name.toLowerCase().includes(this.state.searchField.toLowerCase());
+        const { image, searchField } = this.state;
+        const filteredImages = image.filter(image => {
+            return image.name.toLowerCase().includes(searchField.toLowerCase());
         })
-        if (this.state.image.length === 0) {
-            return <h1>Loading...</h1>
-        } else {
-
-            return (
+        //if (this.state.image.length === 0) {
+        return !image.length ?
+            <h1>Loading...</h1> :
+            (
                 <div className='tc'>
                     <div className='galleryTitle'>Art Gallery</div>
                     <SearchBox searchChange={this.onSearchChange} />
-                    <CardList images={filteredImages} />
+                    <Scroll>
+                        <CardList images={filteredImages} />
+                    </Scroll>
                 </div>
             );
-        }
     }
 }
+
 
 export default App;

@@ -4,7 +4,7 @@ import React from 'react';
 const Card = ({ nameCard, authorCard, idCard }) => {
 	return (
 		//tachyon
-		<div className='tc bg-washed-red dib br3 pa3 ma2 grow bw2 shadow-5'>
+		<div className='tc bg-washed-red dib br3 pa2 ma2 grow bw2 shadow-5'>
 			<img alt='image' src={`https://www.galeriaperspektywa.pl/images/${idCard}`} />
 			<div>
 				<h2>{nameCard}</h2>
