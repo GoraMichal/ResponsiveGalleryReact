@@ -6,9 +6,9 @@ import Card from './Card';
 //        return (
 //            <Card
 //                key={i}
-//                id={images[i].id}
-//                name={images[i].name}
-//                author={images[i].author}
+//                idCard={images[i].id}
+//                nameCard={images[i].name}
+//                authorCard={images[i].author}
 //            />
 //        );
 //    })
@@ -28,9 +28,9 @@ const CardList = ({ images }) => {
                     return (
                         <Card
                             key={i}
-                            id={images[i].id}
-                            name={images[i].name}
-                            author={images[i].author}
+                            idCard={images[i].id}
+                            nameCard={images[i].name}
+                            authorCard={images[i].author}
                         />
                     );
                 })

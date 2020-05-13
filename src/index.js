@@ -2,17 +2,14 @@
 import React from 'react';
 //what screen to rendering
 import ReactDOM from 'react-dom';
-
-import CardList from './CardList.js';
-//destruktor
-import { images } from './Gallery.js';
+import App from './App.js';
+import * as serviceWorker from './serviceWorker';
 
 import 'tachyons';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <CardList images={images}/>
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 );

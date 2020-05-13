@@ -1,15 +1,14 @@
 import React from 'react';
 import './card.css';
 
-//destructoring - ({name, author, id})
-const Card = ({ name, author, id }) => {
+//destructuring - ({name, author, id})
+const Card = ({ nameCard, authorCard, idCard }) => {
 	return (
-		//tachyons className
 		<div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
-			<img alt='image' src={`https://www.galeriaperspektywa.pl/images/${id}`} />
+			<img alt='image' src={`https://www.galeriaperspektywa.pl/images/${idCard}`} />
 			<div>
-				<h2>{name}</h2>
-				<p>{author}</p>
+				<h2>{nameCard}</h2>
+				<p>{authorCard}</p>
 			</div>
 		</div>
 	);
